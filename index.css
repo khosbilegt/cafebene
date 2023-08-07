@@ -1,0 +1,124 @@
+:root {
+     --light-accent: #403D3A;
+     --dark-accent: #333333;
+     --white: #F9F6EE;
+     --yellow: #8A806E;
+     --yellow-hover: #B3A48A;
+     --gray: #949494;
+     --brown: #745E50;
+}
+
+* {
+     margin: 0;
+     padding: 0;
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+     color: var(--white);
+}
+body {
+     background-color: var(--dark-accent);
+}
+header {
+     background-color: var(--light-accent);
+     width: 100vw;
+     display: flex;
+     height: 100px;
+}
+header img {
+     left: 10px;
+     height: 100px;
+     position: absolute;
+}
+nav {
+     margin: auto;
+     display: flex;
+     column-gap: 20px;
+}
+nav .active {
+     position: relative;
+}
+nav .active::after {
+     content: "";
+     position: absolute;
+     bottom: -20px;
+     left: 50%;
+     transform: translateX(-50%);
+     width: 10px;
+     height: 10px;
+     border-radius: 100px;
+     background-color: var(--yellow);
+}
+nav a {
+     transition: 200ms;
+     font-weight: lighter;
+}
+nav a:hover {
+     color: var(--yellow);
+}
+
+.hero {
+     background-color: var(--light-accent);
+     padding: 10px 50px;
+     display: flex;
+     justify-content: space-between;
+}
+.hero img {
+     width: 30vw;
+     object-fit: scale-down;
+}
+.hero p {
+     color: var(--gray);
+}
+.hero-center {
+     text-align: center;
+     display: flex;
+     flex-direction: column;
+     row-gap: 20px;
+     justify-content: center;
+     align-items: center;
+}
+.hero-center button {
+     background-color: var(--yellow);
+     font-size: 15px;
+     border: none;
+     border-radius: 10px;
+     width: 200px;
+     height: 50px;
+     transition: 200ms;
+}
+.hero-center button:hover {
+     background-color: var(--yellow-hover);
+}
+.content {
+     padding: 20px 10vw;
+     justify-content: space-around;
+}
+.menu {
+     margin-top: 25px;
+     list-style: none;
+     column-gap: 50px;
+     display: flex;
+     flex-wrap: wrap;
+}
+.item {
+     flex: 1 1 20vw; /* flex-grow: 1, flex-shrink: 1, flex-basis: 20vw */
+     min-width: 250px;
+     height: 200px;
+     background-color: var(--brown);
+     display: flex;
+     border-radius: 25px;
+     justify-content: space-around;
+}
+.menu .item {
+     margin-bottom: 20px;
+}
+.item div {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+}
+.item img {
+     width: 50%;
+     padding: 10px;
+     object-fit: scale-down;
+}
